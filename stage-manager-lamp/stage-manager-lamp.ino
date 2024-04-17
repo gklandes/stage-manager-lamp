@@ -1,12 +1,10 @@
-const int powerPin = 3;
+// script is intended to be used on an ATTiny85
 const int redPin = 0;
 const int whitePin = 1;
 const int levelPin = A1;
 void setup() {
   pinMode(redPin, OUTPUT);
   pinMode(whitePin, OUTPUT);
-  pinMode(powerPin, OUTPUT);
-  digitalWrite(powerPin, HIGH); 
 }
 void loop() {
   int levelVal = map(analogRead(levelPin), 0, 1023, 0, 510);
